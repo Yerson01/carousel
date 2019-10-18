@@ -1,0 +1,86 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+.carousel-container {
+    width: 60%;
+    margin: 8rem auto;
+    overflow: hidden;
+    position: relative;
+    border: 5px solid gray;
+}
+
+.hover-shadow::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    transition: all .4s ease-in-out;
+}
+
+.linear-gradient-right::after {
+    background: linear-gradient(to right, rgba(0, 0, 0 , .1) , transparent);
+}
+
+.linear-gradient-left::after {
+    background: linear-gradient(to left, rgba(0, 0, 0 , .1) , transparent);
+}
+
+.carousel-slide {
+    display: flex;
+    width: 100%;
+}
+
+#prevBtn, #nextBtn {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+    opacity: .5;
+}
+
+
+#prevBtn {
+    left: 5%;
+}
+
+#nextBtn {
+    right: 5%;
+}
+
+.indicators {
+    position: absolute;
+    width: 15%;
+    right: 0;
+    left: 0;
+    height: 2rem;
+    bottom: 5%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.indicators span {
+    height: 1rem;
+    flex-basis: 1rem;
+    border-radius: 100px;
+    background-color: white;
+    opacity: .5;
+}
+
+.active {
+    opacity: 1!important;
+}
+
